@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account: one
+  category: one
+  ammount: 1
+  description: MyText
+  date: 2024-12-10 13:55:47
+
+two:
+  account: two
+  category: two
+  ammount: 1
+  description: MyText
+  date: 2024-12-10 13:55:47
