@@ -1,5 +1,6 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: %i[ show update destroy ]
+  before_action :authorize_request
 
   # GET /goals
   def index

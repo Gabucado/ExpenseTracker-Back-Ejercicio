@@ -1,4 +1,5 @@
-module AuthTokenConcern extend CommonConcern
+module AuthTokenConcern extend ActiveSupport::Concern
+  include CommonConcern
   class AuthorizationIsNilError < StandardError
     def initialize(msg = "The authorization token is nil")
       super(msg)
@@ -12,7 +13,6 @@ module AuthTokenConcern extend CommonConcern
   end
 
   def check_auth_token
-    debugger
     if request.headers["Authorization"].nil?
       raise AuthTokenConcern::AuthorizationIsNilError
     end
