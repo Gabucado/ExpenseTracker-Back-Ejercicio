@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
   before_action :set_account, only: %i[ show update destroy ]
+  before_action :authorize_request
 
   # GET /accounts
   def index
